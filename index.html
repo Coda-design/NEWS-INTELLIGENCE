@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Dashboard | News Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <header>
+            <div class="logo-group">
+                <div class="logo">NEWS INTELLIGENCE</div>
+                <div class="header-info">
+                    <div class="info-pill"><span class="pill-label">MODELL:</span> <span
+                            id="active-model-text">--</span></div>
+                    <div class="info-pill"><span class="pill-label">DOKUMENT:</span> <span id="stats-docs">0</span>
+                    </div>
+                    <div class="info-pill"><span class="pill-label">KÄLLOR:</span> <span id="stats-sources">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="date-display" id="current-date">--</div>
+        </header>
+
+        <main>
+            <aside class="sidebar">
+                <div class="card animate-in" style="flex-grow: 1;">
+                    <h3 class="box-label">Rapporter</h3>
+                    <ul class="report-list" id="report-list">
+                        <!-- Reports will be injected here -->
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="content-area">
+                <!-- Top Row: Analysis -->
+                <div class="card report-viewer animate-in">
+                    <h3 class="box-label">Omvärldsanalys (Senaste 24–48h)</h3>
+                    <div class="report-body" id="section-analysis">
+                        Välkommen. Välj en rapport i menyn för att se analysen.
+                    </div>
+                </div>
+
+                <!-- Bottom Grid: Actions -->
+                <div class="horizontal-grid">
+                    <div class="card info-box animate-in">
+                        <h3 class="box-label">Innehållsidéer</h3>
+                        <div class="box-content" id="section-ideas">--</div>
+                    </div>
+                    <div class="card info-box animate-in">
+                        <h3 class="box-label">Publiceringsplan</h3>
+                        <div class="box-content" id="section-plan">--</div>
+                    </div>
+                    <div class="card info-box animate-in">
+                        <h3 class="box-label">Förslag på pitchar</h3>
+                        <div class="box-content" id="section-pitches">--</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
